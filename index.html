@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Cloud Cost Analytics Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head><body>
+<h1>Cloud Cost Analytics Dashboard</h1><div class="sub">2023 multi-cloud spend &middot; AWS, Azure, GCP &middot; USD &middot; budget is a derived baseline (avg monthly cost +5%) &middot; use From/To to pick a month range</div>
+<div class="bar"><label>Provider <select id="p"></select></label><label>Environment <select id="e"></select></label><label>From <select id="mf"></select></label><label>To <select id="mt"></select></label><button id="r">Reset filters</button><span class="sp"></span><button id="th">Toggle theme</button></div>
+<div class="kpis" id="kpis"></div>
+<div class="grid">
+<div class="card wide"><h3>Monthly net cost vs derived budget</h3><div class="ch"><canvas id="c1"></canvas></div></div>
+<div class="card"><h3>Cost by cloud provider</h3><div class="ch"><canvas id="c2"></canvas></div></div>
+<div class="card"><h3>Cost by environment</h3><div class="ch"><canvas id="c3"></canvas></div></div>
+<div class="card"><h3>Cost by service</h3><div class="ch"><canvas id="c4"></canvas></div></div>
+<div class="card"><h3>Cost by region</h3><div class="ch"><canvas id="c5"></canvas></div></div>
+<div class="card wide"><h3>Net cost by project</h3><div class="bar"><input type="search" id="q" placeholder="Search project..."><button id="ex">Export CSV</button></div><div class="tw"><table><thead><tr><th data-k="p">Project</th><th class="n" data-k="c">Net cost</th><th class="n">% of total</th><th class="n" data-k="h">High-risk days</th></tr></thead><tbody id="tb"></tbody></table></div></div>
+<div class="card wide"><h3>Key insights</h3><ul id="ins"></ul></div>
+</div>
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+</body></html>
