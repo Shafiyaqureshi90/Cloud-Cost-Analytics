@@ -4,8 +4,6 @@ Multi-cloud (AWS, Azure, GCP) cost analytics for 2023, built two ways: a **Power
 
 🔗 **[Live Dashboard](https://cloud-cost-analytics.vercel.app/)**
 
-![Dashboard](images/dashboard.png)
-
 ---
 
 ## 📌 Problem Statement
